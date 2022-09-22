@@ -27,13 +27,15 @@
 .box-one {
     background-color: blue;
     position: absolute;
-    top: 1000px;
+    top: 170px;
 }
 .box-two {
     background-color: green;
-    /* position: relative;
-    left: 50px;
-    top: 15px; */
+    position: relative;
+    left: 100px;
+    right: 100px;
+    top: 15px;
+
     /* position: sticky;
     top: 20px; */
 }
@@ -53,19 +55,23 @@ span {
 
 
 /* -----------------------Grid----------------------- */
-.grid-container{
+.grid-container {
     display: grid;
     width: 30%;
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     padding: 10px;
 }
-.grid-item{
+.grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0,0,0,0.8);
     padding: 10px;
     font-size: 30px;
     text-align: center;
+}
+.grid-item-big {
+    grid-column-start: 2; /* start from this line */
+    grid-column-end: 4;   /* end at this line */
 }
 
 /* -----------------------Flex Box----------------------- */
@@ -73,10 +79,31 @@ span {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    background-color: #333333;
+    background-color:cadetblue;
     padding: 5px;
 }
 .nav-item {
     color: white;
     padding: 10px;
+    text-align: center;
+}
+
+.flexbox {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color:cadetblue;
+    padding: 5px;
+}
+.item {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+    border-color: aqua;
+    border-style: solid;
+}
+#item-big {
+    flex-grow: 2;
 }
